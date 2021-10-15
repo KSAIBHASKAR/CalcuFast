@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About"
+    android:background="@color/bhaskarBlue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/bhaskarBlue"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:text="About"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:id="@+id/txtCalcButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_calculator"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+            <TextView
+                android:id="@+id/txtCurrButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_currency"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+            <TextView
+                android:id="@+id/txtAboutButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_about"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCardView"
+        android:layout_below="@+id/appbar2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp">
+    <ImageView
+        android:id="@+id/imgAboutLogoIcon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/calcu_fast_icon"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/txtAboutTitle"
+        android:layout_below="@+id/appbar2"
+        android:layout_toRightOf="@+id/imageCardView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:text="Why calcu'late' when you have calcu'fast' for android."
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_margin="20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/creditCardView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/txtAboutTitle"
+        android:layout_alignParentRight="true"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardElevation="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Credits"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_margin="5dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtCreditApi"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_toLeftOf="@+id/creditCardView"
+        android:layout_below="@+id/imageCardView"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="API to exchange currency is provided by 'currency.getgeoapi.com'"
+        android:textSize="16sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/DevCardView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/txtCreditApi"
+        android:layout_alignParentLeft="true"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardElevation="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Devs"
+            android:textSize="40sp"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txtDevNames"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_toRightOf="@+id/DevCardView"
+        android:layout_below="@+id/creditCardView"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="○ Ankur Kumar Singh \n ○ K. Sai Bhaskar \n           ○ Ankit Chandra"
+        android:textSize="16sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ContactCardView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/txtDevNames"
+        android:layout_alignParentRight="true"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Contact Us \n / Support Us"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txtContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ContactCardView"
+        android:layout_below="@+id/DevCardView"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:text="Email Id- userbotgl65@gmail.com"
+        android:clickable="true"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txtSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ContactCardView"
+        android:layout_below="@+id/txtContact"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="DONATE\n https://paytm.me/uVp-9aj"
+        android:clickable="true"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

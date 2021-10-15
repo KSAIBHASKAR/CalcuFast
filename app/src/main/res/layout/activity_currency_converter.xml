@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrencyConverter"
+    android:background="@color/bhaskarBlue">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/bhaskarBlue"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:text="Currency Converter"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:id="@+id/txtCalcButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_calculator"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+            <TextView
+                android:id="@+id/txtCurrButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_currency"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+            <TextView
+                android:id="@+id/txtAboutButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableRight="@drawable/ic_about"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/spinnerCard"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:layout_below="@+id/appbar3"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="30dp">
+
+
+    <Spinner
+        android:id="@+id/spnSpinner1"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top"
+        android:spinnerMode="dropdown"
+        android:layout_centerHorizontal="true"
+        android:background="#D2AFF1DA"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/txtFrom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="From"
+        android:layout_gravity="top"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Spinner
+        android:id="@+id/spnSpinner2"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:spinnerMode="dropdown"
+        android:layout_centerHorizontal="true"
+        android:background="#D2AFF1DA"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="80dp"/>
+
+    <TextView
+        android:id="@+id/txtTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="To"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp" />
+
+</androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ResultCard"
+        android:layout_below="@+id/spinnerCard"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="30dp">
+
+    <EditText
+        android:id="@+id/etEnterAmount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Enter Amount"
+        android:textStyle="bold"
+        android:textColor="#0D76A6"
+        android:background="#D2AFF1DA"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/txtConvertButton"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:text="Convert"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:clickable="true"/>
+
+
+    <TextView
+        android:id="@+id/txtConversionResult"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="#D2AFF1DA"
+        android:text="Result"
+        android:textColor="#0D76A6"
+        android:textSize="20sp"
+        android:layout_margin="10dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtService1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/ResultCard"
+        android:gravity="center"
+        android:text="Exchange rates are provided by currency.getgeoapi.com \n -updated on-"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:id="@+id/txtService2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/txtService1"
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:text=""/>
+
+
+</RelativeLayout>

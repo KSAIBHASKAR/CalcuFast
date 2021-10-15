@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">CalcuFast</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string-array name="currency">
+        <item>SELECT</item>
+        <item>Afghan Afghani - AFN</item>
+        <item>Australian Dollar - AUD</item>
+        <item>Bangladeshi taka - BDT</item>
+        <item>Brazilian real - BRL</item>
+        <item>British Pound - GBP</item>
+        <item>Canadian Dollar - CAD</item>
+        <item>Renminbi - CNY</item>
+        <item>Egyptian Pound - EGP</item>
+        <item>Euro - EUR</item>
+        <item>Hong Kong Dollar - HKD</item>
+        <item>Hungarian Forint - HUF</item>
+        <item>Indian Rupees - INR</item>
+        <item>Iranian Rial - IRR</item>
+        <item>Japanese Yen - JPY</item>
+        <item>Kuwaiti Dinar - KWD</item>
+        <item>Maldivian Rufiyaa - MVR</item>
+        <item>Mexican Peso - MXN</item>
+        <item>New Zealand Dollar - NZD</item>
+        <item>Pakistani Rupee - PKR</item>
+        <item>Philippine peso - PHP</item>
+        <item>Russian Ruble - RUB</item>
+        <item>Saudi riyal - SAR</item>
+        <item>Singapore Dollar - SGD</item>
+        <item>South African Rand - ZAR</item>
+        <item>South Korean won - KRW</item>
+        <item>Sri Lankan rupee - LKR</item>
+        <item>Swiss Franc - CHF</item>
+        <item>Turkish lira - TRY</item>
+        <item>Ugandan shilling - UGX</item>
+        <item>United Arab Emirates Dirham - AED</item>
+        <item>United States Dollar - USD</item>
+        <item>Venezuelan bolívar - VES</item>
+    </string-array>
+
+</resources>
